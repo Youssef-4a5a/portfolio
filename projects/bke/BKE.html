@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/color/jquery.color-2.1.2.js"></script>
+    <title>Boter, Kaas en Eieren!</title>
+    <style>
+        table, tr, td{
+            border: 1px solid black;
+        }
+        
+        td {
+            padding: 50px;
+        }
+        
+        #table {
+            position: absolute;
+            left: 35%;
+            font-size: 2vw;
+        }
+        
+        #playerX {
+            position: absolute;
+            left: 3vw;
+            top: 2vw;
+            font-size: 2vw;
+        }
+        
+        #playerO {
+            position: absolute;
+            right: 3vw;
+            top: 2vw;
+            font-size: 2vw;
+        }
+        
+        #text {
+            position: absolute;
+            left: 25vw;
+            top: 30vw;
+            font-size: 1vw;
+        }
+        
+        #start {
+            position: absolute;
+            left: 40%;
+            top: 20%;
+            font-size: 4vw;
+        }
+    </style>
+</head>
+<body>
+    <div id="playerX">
+        <div id="nameX">Player X</div>
+        <br>
+        <input id="playerXField" type="text" maxlength="10"> 
+
+    </div>
+    <div id="playerO">
+        <div id="nameO">Player O</div>
+        <br>
+        <input id="playerOField" type="text" maxlength="10">
+    </div>
+
+    <table id="table">
+        <tr>
+            <td id="vak1" onclick="vakken(1)"></td>
+            <td id="vak2" onclick="vakken(2)"></td>
+            <td id="vak3" onclick="vakken(3)"></td>
+        </tr>
+        <tr>
+            <td id="vak4" onclick="vakken(4)"></td>
+            <td id="vak5" onclick="vakken(5)"></td>
+            <td id="vak6" onclick="vakken(6)"></td>
+        </tr>
+        <tr>
+            <td id="vak7" onclick="vakken(7)"></td>
+            <td id="vak8" onclick="vakken(8)"></td>
+            <td id="vak9" onclick="vakken(9)"></td>
+        </tr>
+    </table>
+    
+    <button id="start" onclick="player()">Start</button>
+    <div id="text">Bereid je voor op het spel! Voer een gebruiksnaam in of speel met de basis namen. Zodra jullie klaar zijn, druk op Start!</div>
+    
+    <script>
+        var beurt = 0;
+        var vak1 = document.getElementById("vak1");
+        var vak2 = document.getElementById("vak2");
+        var vak3 = document.getElementById("vak3");
+        
+        var vak4 = document.getElementById("vak4");
+        var vak5 = document.getElementById("vak5");
+        var vak6 = document.getElementById("vak6");
+        
+        var vak7 = document.getElementById("vak7");
+        var vak8 = document.getElementById("vak8");
+        var vak9 = document.getElementById("vak9");
+        var playerX;
+        var playerO;
+        
+        function player(){
+            playerX = document.getElementById("playerXField").value;
+            playerO = document.getElementById("playerOField").value;
+            
+            document.getElementById("nameX").innerHTML = playerX;
+            document.getElementById("nameO").innerHTML = playerO;
+            
+            if(document.getElementById("playerXField").value == ""){
+                playerX = "X";
+                document.getElementById("nameX").innerHTML = playerX;
+            }
+            
+            if(document.getElementById("playerOField").value == ""){
+                playerO = "O";
+                document.getElementById("nameO").innerHTML = playerO;
+            }
+        }
+        
+        function vakken(veld){
+            
+            if(document.getElementById("vak"+veld).innerHTML !== ""){
+                document.getElementById("text").innerHTML = "Mag niet!";
+            }
+            
+             else { 
+                 $("#text").empty();
+                 if (beurt == 0) {
+                    document.getElementById("vak"+veld).innerHTML = "x";
+                    beurt = 1;
+                    bericht();
+                } else
+                {
+                    $("#text").empty();
+                    document.getElementById("vak"+veld).innerHTML = "o";
+                    beurt = 0;
+                    bericht();
+                }
+            }
+        }
+        
+        function bericht(){
+            if((vak1.innerHTML == "x") && (vak2.innerHTML == "x") && (vak3.innerHTML == "x")){
+                document.getElementById("text").innerHTML = "Player " + playerX + " heeft gewonnen!";
+                setTimeout(function(){ location.reload(); }, 5000);;
+            } else if(vak4.innerHTML == "x" && vak5.innerHTML == "x" && vak6.innerHTML == "x"){
+                document.getElementById("text").innerHTML = "Player " + playerX + " heeft gewonnen!";
+                setTimeout(function(){ location.reload(); }, 5000);;
+            }else if(vak7.innerHTML == "x" && vak8.innerHTML == "x" && vak9.innerHTML == "x"){
+                document.getElementById("text").innerHTML = "Player " + playerX + " heeft gewonnen!";
+                setTimeout(function(){ location.reload(); }, 5000);;
+            }else if(vak1.innerHTML == "x" && vak5.innerHTML == "x" && vak9.innerHTML == "x"){
+                document.getElementById("text").innerHTML = "Player " + playerX + " heeft gewonnen!";
+                setTimeout(function(){ location.reload(); }, 5000);;
+            }else if(vak3.innerHTML == "x" && vak5.innerHTML == "x" && vak7.innerHTML == "x"){
+                document.getElementById("text").innerHTML = "Player " + playerX + " heeft gewonnen!";
+                setTimeout(function(){ location.reload(); }, 5000);;
+            }else if(vak2.innerHTML == "x" && vak5.innerHTML == "x" && vak8.innerHTML == "x"){
+                document.getElementById("text").innerHTML = "Player " + playerX + " heeft gewonnen!";
+                setTimeout(function(){ location.reload(); }, 5000);;
+            }
+            
+            if((vak1.innerHTML == "o") && (vak2.innerHTML == "o") && (vak3.innerHTML == "o")){
+                document.getElementById("text").innerHTML = "Player " + playerO + " heeft gewonnen!";
+                setTimeout(function(){ location.reload(); }, 5000);;
+            } else if(vak4.innerHTML == "o" && vak5.innerHTML == "o" && vak6.innerHTML == "o"){
+                document.getElementById("text").innerHTML = "Player " + playerO + " heeft gewonnen!";
+                setTimeout(function(){ location.reload(); }, 5000);;
+            }else if(vak7.innerHTML == "o" && vak8.innerHTML == "o" && vak9.innerHTML == "o"){
+                document.getElementById("text").innerHTML = "Player " + playerO + " heeft gewonnen!";
+                setTimeout(function(){ location.reload(); }, 5000);;
+            }else if(vak1.innerHTML == "o" && vak5.innerHTML == "o" && vak9.innerHTML == "o"){
+                document.getElementById("text").innerHTML = "Player " + playerO + " heeft gewonnen!";
+                setTimeout(function(){ location.reload(); }, 5000);;
+            }else if(vak3.innerHTML == "o" && vak5.innerHTML == "o" && vak7.innerHTML == "o"){
+                document.getElementById("text").innerHTML = "Player " + playerO + " heeft gewonnen!";
+                setTimeout(function(){ location.reload(); }, 5000);;
+            }else if(vak2.innerHTML == "o" && vak5.innerHTML == "o" && vak8.innerHTML == "o"){
+                document.getElementById("text").innerHTML = "Player " + playerO + " heeft gewonnen!";
+                setTimeout(function(){ location.reload(); }, 5000);;
+            }else if(vak1.innerHTML&&vak2.innerHTML&&vak3.innerHTML&&vak4.innerHTML&&vak5.innerHTML&&vak6.innerHTML&&vak7.innerHTML&&vak8.innerHTML&&vak9.innerHTML !== ""){
+                document.getElementById("text").innerHTML = "Gelijk spel!";
+                setTimeout(function(){ location.reload(); }, 5000);;
+            }
+        }
+        
+        $(document).ready(function(){
+           $("#table").hide();
+           
+           $("#start").click(function(){
+               $("#table").show();
+               $("#start").hide();
+               $("#text").empty();
+               $("#playerOField").hide();
+               $("#playerXField").hide();
+           })
+        });
+    </script>
+</body>
+</html>

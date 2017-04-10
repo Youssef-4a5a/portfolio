@@ -1,0 +1,235 @@
+/*pas tags voor dingen die weg moeten aan met property hidden en sizes 0px*/
+/*maak dingen die blijven breder om die ruimte op te vullen*/
+/*banner is weg want deed verneukt op smal scherm*/
+
+/*alle paginas*/
+body {
+	background-color: #1a1a1a;
+	height:100%;
+}
+.banner{
+	visibility:none;
+	width:0px;
+	height:0px;
+}
+#banner {
+	visibility:none;
+	width:0px;
+	height:0px;
+}
+#bannerlogo{
+	float:left;
+	height: 60px;
+	top: 30px;
+	margin-left:10%;
+	margin-right:10%;
+}
+#border{
+	position:absolute;
+	bottom:0px;
+	left:0px;
+	width:100%;
+	height:4px;
+	background-color:#9bab21;
+}
+#border2{
+	visibility:none;
+	height:0px;
+	width:0px;
+}
+.nav{
+	width:100%;
+	background-color:black;
+	height:100px;
+	position:fixed;
+	top:0px;
+	left:0px;
+	color:white;
+	z-index:2;
+}
+.nav ul li{
+    display:inline;
+    font-size:200%;
+    margin:0 15px;
+}
+.nav ul li a:link{text-decoration:none;color:#9bab21;}
+.nav ul li a:visited{text-decoration:none;color:#9bab21;}
+.nav ul li a:hover{text-decoration:none;color:white;}
+.nav ul li a:active{text-decoration:none;color:white;}
+.subscribe{
+	position:relative;
+	left:100px;
+}
+.footer {
+	float:right;
+	position: relative;
+	bottom: 0px;
+	height: 70px;
+	width: 100%;
+	background-color: black;
+	border-top:2px solid #9bab21;
+}
+.footer ul li{
+	display: inline;
+}
+.logo{
+	width:50px;
+	height:40px;
+	margin-left:2%;
+	margin-top:15px;
+}
+
+/*index*/
+#content{
+	width:96%;
+	float:left;
+	margin-top:150px;
+	margin-left:2%;
+}
+.content{
+	width:100%;
+	height:300px;
+	background-color:black;
+	float:left;
+	margin-bottom:20px;
+	margin-left:0px;
+	color:white;
+	border:solid #9bab21 2px;
+	font-family: 'audiowide',cursive;
+}
+.title {
+	text-align: center;
+	border-bottom:2px solid #9bab21;
+	width:96%;
+	margin-left:2%;
+	height:22px;
+}
+.box{
+	width:96%;
+	height:252px;
+	margin-left:2%;
+}
+.readmore{
+	position: relative;
+	bottom:0px;
+	text-align: center;
+	background-color: black;
+	height:20px;
+}
+.trailer{
+	visibility:none;
+	width:0px;
+	height:0px;
+}
+.sidebar{
+	visibility:none;
+	width:0px;
+	height:0px;
+}
+.twatter{
+	visibility:none;
+	width:0px;
+	height:0px;
+}
+.twitter-timeline{
+	width:0px;
+	height:0px;
+}
+
+/*about me*/
+.content3{
+	position: relative;
+	width:94%;
+	height:600px;
+	background-color:black;
+	margin-top:150px;
+	margin-bottom: 50px;
+	margin-left:3%;
+	color:white;
+	border:solid #9bab21 2px;
+	box-shadow:5px 10px 10px #888;
+	padding: 50px;
+}
+.content3_title {
+	position: relative;
+	border-bottom: 2px solid #9bab21;
+	height: 60px;
+	background-color: black;
+	color: white;
+	width: 100%;
+	text-align: center;
+	margin-top: 10px;
+	font-size: 20px;
+}
+.content_box{
+	width:100%;
+	height:95%;
+	overflow:hidden;
+	text-overflow: ellipsis;
+}
+
+/*stream*/
+#twitchPlayer {
+	position: relative;
+	width:94%;
+	height:600px;
+	background-color:black;
+	margin-top:150px;
+	margin-left:3%;
+}
+
+/*edit*/
+.edit{
+	position: relative;
+	width:94%;
+	height:600px;
+	background-color:black;
+	margin-top:150px;
+	margin-bottom: 50px;
+	margin-left:3%;
+	border:2px solid #9bab21;
+}
+.editselect{
+	margin-left: 3%;
+	background-color:#1a1a1a;
+	border:solid 1px #9bab21;
+	color:white;
+}
+.edittitle{
+	width:94%;
+	margin-left: 3%;
+	background-color:#1a1a1a;
+	border:solid 1px #9bab21;
+	color:white;
+}
+.editmessage{
+	width:94%;
+	height:400px;
+	margin-left: 3%;
+	background-color:#1a1a1a;
+	border:solid 1px #9bab21;
+	color:white;
+}
+.editsubmit{
+	margin-left:3%;
+}
+
+/*login*/
+#login{
+	position: relative;
+	top:150px;
+	width:20%;
+	height:200px;
+	background-color:black;
+	color:white;
+	border:solid #9bab21 2px;
+	box-shadow:5px 10px 10px #888;
+	margin-bottom:200px;
+}
+#login input{
+	background-color:#1a1a1a;
+	border:solid #9bab21 1px;
+}
+.login{
+	margin-top:25px;
+}

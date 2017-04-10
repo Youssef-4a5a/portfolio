@@ -1,3 +1,51 @@
+body{
+    margin: 0;
+}
+
+.scrolltop {
+	display:none;
+	width:100%;
+	margin:0 auto;
+	position:fixed;
+	bottom:20px;
+	right:10px;
+}
+.scroll {
+	position:absolute;
+	right:20px;
+	bottom:20px;
+	background:#006c35;
+	background:rgba(0,108,53,0.7);
+	padding:20px;
+	text-align: center;
+	margin: 0 0 0 0;
+	cursor:pointer;
+	transition: 0.5s;
+	-moz-transition: 0.5s;
+	-webkit-transition: 0.5s;
+	-o-transition: 0.5s; 
+        border: 1px solid black;
+}
+.scroll:hover {
+	background:rgba(0,108,53,1.0);
+	transition: 0.5s;
+	-moz-transition: 0.5s;
+	-webkit-transition: 0.5s;
+	-o-transition: 0.5s; 		
+}
+.scroll:hover .fa {
+	padding-top:-10px;
+}
+.scroll .fa {
+	font-size:30px;
+	margin-top:-5px;
+	margin-left:1px;
+	transition: 0.5s;
+	-moz-transition: 0.5s;
+	-webkit-transition: 0.5s;
+	-o-transition: 0.5s; 	
+}
+
 * {
     box-sizing: border-box;
 }
@@ -9,12 +57,12 @@
 [class*="col-"] {
     float: left;
     padding: 15px;
-    border: 1px solid black;
 }
 
 .col-6 img{
     margin: 0 auto;
     display: block;
+    width: 100%;
 }
 
 /* For mobile phones: */
@@ -23,16 +71,62 @@
 }
 
 @media only screen and (max-width: 650px){
-    .topcontact{
-        display: none;
-    }
-
     body>img{
         margin: 0 auto;
     }
 
-    .mobile-background{
-        background-image: url("http://placehold.it/250x150");
+    #header_logo {
+        width: 100% !important;
+        margin: 0 auto;
+        display: none !important;
+    }
+
+    header .topcontact_button{
+        display: none !important;
+    }
+
+    #topmenu .hamburger_topmenu{
+        display: inline-block;
+    }
+
+    .hamburger_topmenu .bar1, 
+    .hamburger_topmenu .bar2, 
+    .hamburger_topmenu .bar3{
+        width: 20px;
+        height: 3px;
+        background-color: #fff;
+        margin: 3px 0;
+        transition: 0.4s;
+    }
+
+    #hamburger_list{
+        background-color: #0099cc;
+        color: #fff;
+        text-decoration: none;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        left: 0;
+    }
+
+    #hamburger_list a{
+        text-decoration: none;
+        color: #fff;
+    }
+
+    #hamburger_list li:hover{
+        background-color: #6699ff;
+    }
+
+    #indexTopmenu a,
+    #topmenu a{
+        display: none;
+    }
+
+    footer ul,
+    .center img{
+        width: 100% !important;
     }
 }
 @media only screen and (min-width: 768px) {
@@ -49,14 +143,13 @@
     .col-10 {width: 83.33%;}
     .col-11 {width: 91.66%;}
     .col-12 {width: 100%;}
-    
-    .desktop-background{
-        background-image: url("http://placehold.it/350x150");
+
+    #hamburger_list{
+        display: none;
     }
 }
 
 /*header*/
-
 .left{
     float: left;
 }
@@ -68,22 +161,97 @@ html {
     font-family: "Lucida Sans", sans-serif;
 }
 
+header{
+    background-color: #006C35;
+}
+
+#header_logo{
+    display: block;
+    margin: 0 auto;
+}
+
 .topcontact{
-    padding: 15px;
-    height: 150px;
-    float: right;
-    border: 1px solid black;
-    list-style-type: none;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    display: none;
+    color: #fff;
 }
 
-.topmenu{
+.topcontact_button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: block;
+    height: auto;
+    background: white;
+    padding: 5px;
     text-align: center;
-    padding: 15px;
-    border: 1px solid black;
+    border-radius: 5px;
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
 }
 
-.col-12 .content-h1{
+.fixed{
+    position: fixed !important;
+    left: 0;
+    top: 0;
+}
+
+.hamburger_topmenu {
+    display: none;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+}
+
+.bar1, .bar2, .bar3{
+    width: 35px;
+    height: 5px;
+    background-color: #fff;
+    margin: 6px 0;
+}
+
+#indexTopmenu,
+#topmenu{
+    display: block;
     text-align: center;
+    padding: 15px 0;
+    width: 100%;
+    background-color: #0099cc;
+    position: relative;
+}
+
+#indexTopmenu a,
+#topmenu a{
+    padding: 12px ;
+    text-decoration: none;
+    color: #fff;
+}
+
+
+#indexTopmenu a:hover,
+#topmenu a:hover{
+    border-bottom: 5px solid #fff;
+}
+
+/*content*/
+
+#slider{
+    width: 100%;
+}
+
+.col-12 .about-text,
+.col-12 .projects-text{
+    padding: 25px 0;
+    text-align: center;
+}
+
+.col-12 .indexContent-h1,
+.col-12 .indexContent-h2{
+    text-align: center;
+    margin-top: 10%;
 }
 
 
@@ -95,8 +263,9 @@ html {
     text-align: center;
 }
 
-input[type='text'],
-input[type='submit'],
+input[type="text"], 
+input[type="submit"], 
+input[type="email"], 
 textarea{
     width: 100%;
 }
@@ -105,11 +274,77 @@ textarea{
     height: 100%;
 }
 
-.content-text{
+.col-6 button{
+    width: 100%;
+}
+
+.col-6 .project_title{
     text-align: center;
 }
 
-.col-6 button{
-    width: 100%;
+.content-contact{
+    background-image: url("images/contact.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+}
+
+.contact-text{
+    text-align: center;
+}
+
+div.col-6.projects{
+    padding: 0;
+}
+
+.project-text{
+    width: 95%;
+    margin-left: 10px;
+}
+
+.project-text p {
+    min-height: 190px;
+    padding: 15px 0;
+}
+
+.col-12.projects,
+.col-12.about{
+    padding: 0;
+}
+
+/*footer*/
+
+.footertop{
+    background-image: url("images/footertop.jpg");
+    color: #fff;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.footertop ul,
+.footertop ul li{
+    text-decoration: none;
+    list-style-type: none;
+}
+
+.footertop ul a:hover,
+.footertop ul a:link{
+    color: #fff;
+}
+
+
+.col-12.footerbottom{
+    background-color: #006C35;
+    padding: 0;
+}
+
+footer ul{
+    width: 25%;
+}
+
+
+
+footer .col-12 .center{
+    text-align: center;
 }
 

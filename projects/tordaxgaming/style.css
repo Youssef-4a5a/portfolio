@@ -1,0 +1,247 @@
+/*@font-face{*/
+/*	font-family: 'startrek';*/
+/*    src: url('../font/Chunkfive-webfont.eot#') format('eot'),*/
+         /*url('../font/Chunkfive-webfont.woff') format('woff'),*/
+/*         url('../font/Chunkfive-webfont.ttf') format('truetype');*/
+         /*url('../font/Chunkfive-webfont.svg#webfontM8M0EYs2') format('svg');*/
+/*    font-weight: normal;*/
+/*    font-style: normal;*/
+/*}*/
+
+/*alle paginas*/
+body {
+	background-color: #1a1a1a;
+	height:100%;
+}
+.banner{
+	position:relative;
+	width:100%;
+	height:302px;
+	top:100px;
+}
+#banner {
+	position: relative;
+	width: 100%;
+	height: 300px;
+	background-image: url("images/Logo16-1 (1).jpg");
+	background-size: 100%;
+	background-repeat: no-repeat;
+	background-position: center;
+	z-index: 0;
+}
+#bannerlogo{
+	float:left;
+	height: 60px;
+	top: 30px;
+	margin-left:10%;
+	margin-right:10%;
+}
+#border, #border2{
+	position:absolute;
+	bottom:0px;
+	left:0px;
+	width:100%;
+	height:4px;
+	background-color:#c2d629;
+}
+.nav{
+	width:100%;
+	background-color:black;
+	height:100px;
+	position:fixed;
+	top:0px;
+	left:0px;
+	color:white;
+	z-index:2;
+}
+.nav ul li{
+    display:inline;
+    font-size:200%;
+    margin:0 15px;
+}
+.nav ul li a:link{text-decoration:none;color:#c2d629;}
+.nav ul li a:visited{text-decoration:none;color:#c2d629;}
+.nav ul li a:hover{text-decoration:none;color:#88961d;}
+.nav ul li a:active{text-decoration:none;color:#88961d;}
+.subscribe{
+	position:relative;
+	left:100px;
+}
+.footer {
+	float:right;
+	position: relative;
+	bottom: 0px;
+	height: 70px;
+	width: 100%;
+	background-color: black;
+	border-top:2px solid #c2d629;
+}
+.footer ul li{
+	display: inline;
+}
+.logo{
+	width:50px;
+	height:40px;
+	margin-left:2%;
+	margin-top:15px;
+}
+
+
+/*index*/
+#content{
+	width:58%;
+	float:left;
+	margin-top:150px;
+	margin-left:2%;
+}
+.content{
+	width:100%;
+	height:300px;
+	background-color:black;
+	float:left;
+	margin-bottom:20px;
+	margin-left:0px;
+	color:white;
+	border:solid #c2d629 2px;
+	box-shadow:5px 10px 10px #888;
+	font-family: 'startrek',cursive;
+}
+.title {
+	text-align: center;
+	border-bottom:2px solid #c2d629;
+	width:96%;
+	margin-left:2%;
+	height:22px;
+}
+.box{
+	width:96%;
+	height:252px;
+	margin-left:2%;
+}
+.readmore{
+	position: relative;
+	bottom:0px;
+	text-align: center;
+	background-color: black;
+	height:20px;
+}
+.trailer{
+	height:250px;
+	background-color:#333;
+	color:white;
+	box-shadow:5px 10px 10px #888;
+}
+.sidebar{
+	float:right;
+	margin-top:150px;
+	width:36%;
+	margin-right:2%;
+}
+.twatter{
+	color:white;
+	background-color:#333;
+	box-shadow:5px 10px 15px #888;
+	margin-top:20px;
+}
+
+/*about me*/
+.content3{
+	position: relative;
+	width:94%;
+	height:600px;
+	background-color:black;
+	margin-top:150px;
+	margin-bottom: 50px;
+	margin-left:3%;
+	color:white;
+	border:solid #c2d629 2px;
+	box-shadow:5px 10px 10px #888;
+	padding: 50px;
+}
+.content3_title {
+	position: relative;
+	border-bottom: 2px solid #c2d629;
+	height: 60px;
+	background-color: black;
+	color: white;
+	width: 100%;
+	text-align: center;
+	margin-top: 10px;
+	font-size: 20px;
+}
+.content_box{
+	width:100%;
+	height:95%;
+	overflow:hidden;
+	text-overflow: ellipsis;
+}
+
+/*stream*/
+#twitchPlayer {
+	position: relative;
+	width:94%;
+	height:600px;
+	background-color:black;
+	margin-top:150px;
+	margin-bottom:80px;
+	margin-left:3%;
+}
+
+/*edit*/
+.edit{
+	position: relative;
+	width:94%;
+	height:600px;
+	background-color:black;
+	margin-top:150px;
+	margin-bottom: 50px;
+	margin-left:3%;
+	border:2px solid #c2d629;
+}
+.editselect{
+	margin-left: 3%;
+	background-color:#1a1a1a;
+	border:solid 1px #c2d629;
+	color:white;
+}
+.edittitle{
+	width:94%;
+	margin-left: 3%;
+	background-color:#1a1a1a;
+	border:solid 1px #c2d629;
+	color:white;
+}
+.editmessage{
+	width:94%;
+	height:400px;
+	margin-left: 3%;
+	background-color:#1a1a1a;
+	border:solid 1px #c2d629;
+	color:white;
+}
+.editsubmit{
+	margin-left:3%;
+	background-color:#1a1a1a;
+	border:solid #c2d629 1px;
+	color:white;
+}
+
+/*login*/
+#login{
+	position: relative;
+	top:150px;
+	width:20%;
+	height:200px;
+	background-color:black;
+	color:white;
+	border:solid #c2d629 2px;
+	box-shadow:5px 10px 10px #888;
+	margin-bottom:200px;
+}
+#login input{
+	background-color:#1a1a1a;
+	border:solid #c2d629 1px;
+}
+.login{
+	margin-top:25px;
+}

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Rekenmachine</title>
+        <link href="Rekenmachine.css" rel="stylesheet" type="text/css">
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        
+        <table>
+            <tr><td style="width:298px; height:30px"><div id="display"></div></td></tr>
+        </table>
+        <table>
+            <tr>
+                <td><button onclick="symbool('')"><br></button></td>
+                <td><button onclick="symbool('')"><br></button></td>
+                <td><button onclick="symbool('')"><br></button></td>
+                <td><button onclick="symbool('/')">/</button></td>
+            </tr>
+            <tr>
+                <td><button type="button" onclick="cijfers1(7)">7</button></td>
+                <td><button type="button" onclick="cijfers1(8)">8</button></td>
+                <td><button type="button" onclick="cijfers1(9)">9</button></td>
+                <td><button type="button" onclick="symbool('x')">x</button></td>
+            </tr>
+            <tr>
+                <td><button type="button" onclick="cijfers1(4)">4</button></td>
+                <td><button type="button" onclick="cijfers1(5)">5</button></td>
+                <td><button type="button" onclick="cijfers1(6)">6</button></td>
+                <td><button type="button" onclick="symbool('-')">-</button></td>
+            </tr>
+            <tr>
+                <td><button type="button" onclick="cijfers1(1)">1</button></td>
+                <td><button type="button" onclick="cijfers1(2)">2</button></td>
+                <td><button type="button" onclick="cijfers1(3)">3</button></td>
+                <td><button type="button" onclick="symbool('+')">+</button></td>
+            </tr>
+            <tr>
+                <td><button value="reset">Clear</button></td>
+                <td><button type="button" onclick="cijfers1(0)">0</button></td>
+                <td><button type="button" onclick="cijfers1('.')">.</button></td>
+                <td><button onclick="uitkomst()"  name="=">=</button></td>
+            </tr>
+        </table>
+        
+        
+        <script>
+        var getal1="";
+        var getal2="";
+        var teken="";
+        var tussenresultaat = "";
+            function cijfers1(getal){
+                if (teken==""){
+                    getal1 += getal;    
+                }
+                else {
+                    if (getal1 == "") {
+                        getal1 = tussenresultaat;
+                    }
+                    getal2 += getal;
+                
+            }
+            document.getElementById("display").innerHTML += getal;
+            
+            }
+            
+            function symbool(waarde) {
+               teken = waarde;
+            document.getElementById("display").innerHTML += waarde;
+            }
+            
+            function uitkomst() {
+                if (teken=="+") {
+                    document.getElementById("display").innerHTML = parseFloat(getal1) + parseFloat(getal2);
+                }
+                if (teken=="-") {
+                    document.getElementById("display").innerHTML = parseFloat(getal1) - parseFloat(getal2);
+                }
+                if (teken=="/") {
+                    document.getElementById("display").innerHTML = parseFloat(getal1) / parseFloat(getal2);
+                }
+                if (teken=="x") {
+                    document.getElementById("display").innerHTML = parseFloat(getal1) * parseFloat(getal2);
+                }
+                tussenresultaat = document.getElementById("display").innerHTML;
+                getal1 = "";
+                getal2 = "";
+                teken = "";
+            }
+        </script>
+    </body>
+</html>
