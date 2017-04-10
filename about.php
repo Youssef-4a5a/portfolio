@@ -6,7 +6,7 @@ set_error_handler("var_dump");
 <!DOCTYPE html>
 <html>
     <head>
-        <title></title>
+        <title>Youssef Kasem - Portfolio</title>
         <meta charset="UTF-8"> 
         <link rel="stylesheet" type="text/css" href="index.css">
         <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
